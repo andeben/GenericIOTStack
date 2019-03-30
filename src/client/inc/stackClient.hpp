@@ -1,15 +1,15 @@
-#ifndef CLIENT_MAIN_HPP
-#define CLIENT_MAIN_HPP
+#ifndef STACK_CLIENT_HPP
+#define STACK_CLIENT_HPP
 #include <map>
 #include "common/inc/communicationIf.hpp"
 #include "client/inc/communicationHandler.hpp"
 #include "client/inc/signalDispatcher.hpp"
 
-class Client
+class StackClient
 {
   public:
-  Client();
-  ~Client();
+  StackClient();
+  ~StackClient();
   bool Init(CommunicationIf* connection);
   void Execute();
   private:
@@ -17,4 +17,4 @@ class Client
   SignalDispatcher*     mSignalDispatcher;
 };
 
-#endif //OBJECT_MANAGER_HPP
+#endif //STACK_CLIENT_HPP
