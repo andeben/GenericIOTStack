@@ -1,4 +1,4 @@
-#include "objectManager.hpp"
+#include "client/inc/objectManager.hpp"
 
 ObjectManager::ObjectManager()
 {

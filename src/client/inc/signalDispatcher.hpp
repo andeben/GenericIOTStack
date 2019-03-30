@@ -1,7 +1,7 @@
 #ifndef SIGNAL_DISPATCHER_HPP
 #define SIGNAL_DISPATCHER_HPP
-#include "CommunicationIf.hpp"
-#include "objectDefinition.hpp"
+#include "common/inc/communicationIf.hpp"
+#include "common/inc/objectDefinition.hpp"
 
 class SignalDispatcher
 {

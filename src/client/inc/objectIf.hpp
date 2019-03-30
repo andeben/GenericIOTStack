@@ -1,7 +1,7 @@
 #ifndef OBJECT_IF_HPP
 #define OBJECT_IF_HPP
 #include <cstdint>
-#include "objectDefinition.hpp"
+#include "common/inc/objectDefinition.hpp"
 
 class ObjectIf
 {

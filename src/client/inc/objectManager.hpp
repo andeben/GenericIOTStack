@@ -1,8 +1,8 @@
 #ifndef OBJECT_MANAGER_HPP
 #define OBJECT_MANAGER_HPP
 #include <map>
-#include "objectDefinition.hpp"
-#include "objectIf.hpp"
+#include "common/inc/objectDefinition.hpp"
+#include "client/inc/objectIf.hpp"
 
 class ObjectManager
 {

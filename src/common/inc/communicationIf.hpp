@@ -2,7 +2,7 @@
 #define COMMUNICATION_IF_HPP
 #include <cstdint>
 #include <functional>
-#include "signalDefinition.hpp"
+#include "common/inc/signalDefinition.hpp"
 
 class CommunicationIf
 {

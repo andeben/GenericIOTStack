@@ -1,7 +1,7 @@
 #ifndef COMMUNICATION_HANDLER_HPP
 #define COMMUNICATION_HANDLER_HPP
-#include "communicationIf.hpp"
-#include "signalDispatcher.hpp"
+#include "common/inc/communicationIf.hpp"
+#include "client/inc/signalDispatcher.hpp"
 
 class CommunicationHandler
 {

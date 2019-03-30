@@ -13,7 +13,7 @@ add_library(GenericIOTStackClient ${ClientSrc})
 
 
 #target_include_directories(GenericIOTStackCommon PUBLIC "${PROJECT_SOURCE_DIR}/src/common/inc")
-target_include_directories(GenericIOTStackClient PUBLIC "${PROJECT_SOURCE_DIR}/src/client/inc")
-target_include_directories(GenericIOTStackClient PUBLIC "${PROJECT_SOURCE_DIR}/src/common/inc")
+target_include_directories(GenericIOTStackClient PUBLIC "${PROJECT_SOURCE_DIR}/src/")
+#target_include_directories(GenericIOTStackClient PUBLIC "${PROJECT_SOURCE_DIR}/src/common/inc")
 #target_include_directories(GenericIOTStackServer PUBLIC "${PROJECT_SOURCE_DIR}/src/server/inc")
 

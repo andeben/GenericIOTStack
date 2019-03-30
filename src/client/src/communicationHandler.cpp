@@ -1,7 +1,7 @@
 #include <functional>
 #include <string>
-#include "communicationHandler.hpp"
-#include "signalDispatcher.hpp"
+#include "client/inc/communicationHandler.hpp"
+#include "client/inc/signalDispatcher.hpp"
 
 CommunicationHandler::CommunicationHandler(CommunicationIf* communication, 
                                            SignalDispatcher* signalDispatcher)

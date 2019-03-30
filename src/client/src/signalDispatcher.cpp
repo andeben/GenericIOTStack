@@ -1,4 +1,4 @@
-#include "SignalDispatcher.hpp"
+#include "client/inc/signalDispatcher.hpp"
 
 
 SignalDispatcher::SignalDispatcher()
