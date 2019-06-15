@@ -1,8 +1,7 @@
 #include "clientMain.hpp"
 
 Client::Client()
-{
-
+{   
 }
 
 Client::~Client()
