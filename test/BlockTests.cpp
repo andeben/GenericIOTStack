@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <gtest/gtest.h>
-#include "genericIoTStack.hpp"
-#include "communicationIfMock.hpp"
+#include <genericIoTStack.hpp>
+#include <communicationIfMock.hpp>
 /* this is a test that can pass*/
 TEST(AddTest, InitClient)
 {

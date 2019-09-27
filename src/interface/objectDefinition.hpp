@@ -18,10 +18,12 @@ enum GIS_Command_t {
   SUBSCRIBE
 };
 
-enum GIS_ObjectTypeId_t {
+enum GIS_ObjectTypeId_t {  
   UNIT,
   CLIMATE,
-  WATER_CONTROL
+  WATER_CONTROL,
+
+  UNDEFINED
 };
 
 enum GIS_ObjectAttributeId_t {

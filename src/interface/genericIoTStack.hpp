@@ -1,7 +1,8 @@
 #ifndef GENERIC_IOT_STACK_HPP
 #define GENERIC_IOT_STACK_HPP
 #include "communicationIf.hpp"
-#include "objectDefinition.hpp"
+#include "applicationObjectIf.hpp"
+class GenericIoTStackPrivate;
 
 class GenericIoTStack
 {
@@ -10,9 +11,10 @@ class GenericIoTStack
 	~GenericIoTStack();
 	bool InitializeClient(CommunicationIf* connection);
 	bool InitializeServer(CommunicationIf* connection);
-  bool RunStack();
-  GIS_ReturnCode_t CreateApplicationObject(GIS_ObjectTypeId_t objectTypeId, int objectInstanceId);
-  
+  GIS_ReturnCode_t RegisterApplicationObject(ApplicationObjectIf* object);
+	bool RunStack();
+	private:
+	GenericIoTStackPrivate* mPrivate;
 };
 
 #endif //GENERIC_IOT_STACK_HPP

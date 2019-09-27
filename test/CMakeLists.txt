@@ -20,9 +20,9 @@ if (test)
   ##############
   add_executable(blockTests BlockTests.cpp ${Mocks})
   target_include_directories(blockTests PRIVATE ${gtest_SOURCE_DIR}/include 
-                                              ${gtest_SOURCE_DIR}
-                                              ${PROJECT_SOURCE_DIR}/src/interface/
-                                              ${PROJECT_SOURCE_DIR}/test/mocks/)  
+                                                ${gtest_SOURCE_DIR}
+                                                ${PROJECT_SOURCE_DIR}/src/interface/
+                                                ${PROJECT_SOURCE_DIR}/test/mocks/)  
  
 
 
