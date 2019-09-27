@@ -4,24 +4,24 @@
 
 GenericIoTStack::GenericIoTStack()
 {
-  mPrivate = new GenericIoTStackPrivate();
+  mPrivateData = new GenericIoTStackPrivate();
 }
 
 GenericIoTStack::~GenericIoTStack()
 {
-   delete mPrivate;
+   delete mPrivateData;
 }
 
 
 bool GenericIoTStack::InitializeClient(CommunicationIf* connection)
 {
   bool returnValue = false;
-  if (mPrivate->mClient == nullptr)
+  if (mPrivateData->mClient == nullptr)
   {
-    mPrivate->mClient = new Client();
+    mPrivateData->mClient = new Client();
   }
-  returnValue = mPrivate->mClient->Init(connection);
-  
+  returnValue = mPrivateData->mClient->Init(connection);
+
   return returnValue;
 }
 
@@ -33,7 +33,7 @@ bool GenericIoTStack::InitializeServer(CommunicationIf* connection)
 
 GIS_ReturnCode_t GenericIoTStack::RegisterApplicationObject(ApplicationObjectIf* object)
 {
-  return GIS_ReturnCode_t::GIS_NO_ERROR;
+  return GIS_ReturnCode_t::GIS_ACTION_NOT_ALLOWED;
 }
 
 bool GenericIoTStack::RunStack()

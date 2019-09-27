@@ -13,8 +13,9 @@ class GenericIoTStack
 	bool InitializeServer(CommunicationIf* connection);
   GIS_ReturnCode_t RegisterApplicationObject(ApplicationObjectIf* object);
 	bool RunStack();
+	
 	private:
-	GenericIoTStackPrivate* mPrivate;
+	GenericIoTStackPrivate* mPrivateData;
 };
 
 #endif //GENERIC_IOT_STACK_HPP
