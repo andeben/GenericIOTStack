@@ -19,8 +19,8 @@ add_library(GenericIoTStack STATIC ${ClientSrc}
                                    ${ServerInc}
                                    ${InterfaceInc})
 
-
-include_directories("client/inc/"
-					          "common/inc/"
-					          "interface/")
+                                  
+target_include_directories(GenericIoTStack PRIVATE "client/inc/"
+					                                         "common/inc/"
+					                                         "interface/")
 

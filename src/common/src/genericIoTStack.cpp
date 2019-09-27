@@ -1,5 +1,5 @@
 #include "genericIoTStack.hpp"
-
+#include "client.hpp"
 
 GenericIoTStack::GenericIoTStack()
 {

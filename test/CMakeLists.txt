@@ -12,21 +12,24 @@ if (test)
 
   # Include the gtest library. gtest_SOURCE_DIR is available due to
   # 'project(gtest)' above.
-  include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
-  include_directories(${PROJECT_SOURCE_DIR}/src/interface/)
-  include_directories(${PROJECT_SOURCE_DIR}/src/common/inc)
-  include_directories(${PROJECT_SOURCE_DIR}/test/mocks/)
+  
   FILE(GLOB Mocks ${PROJECT_SOURCE_DIR}/test/mocks/*.hpp)
   
   ##############
   # Unit Tests
   ##############
-  add_executable(runTests test.cpp ${Mocks})
+  add_executable(blockTests BlockTests.cpp ${Mocks})
+  target_include_directories(blockTests PRIVATE ${gtest_SOURCE_DIR}/include 
+                                              ${gtest_SOURCE_DIR}
+                                              ${PROJECT_SOURCE_DIR}/src/interface/
+                                              ${PROJECT_SOURCE_DIR}/test/mocks/)  
+ 
+
 
   # Standard linking to gtest stuff.
-  target_link_libraries(runTests gmock gmock_main)
+  target_link_libraries(blockTests gmock gmock_main)
 
   # Extra linking for the project.
-  target_link_libraries(runTests GenericIoTStack)
+  target_link_libraries(blockTests GenericIoTStack)
     
 endif()

@@ -1,12 +1,11 @@
 #ifndef CLIENT_HPP
 #define CLIENT_HPP
 #include <map>
-#include "clientInterface.hpp"
 #include "communicationIf.hpp"
 #include "communicationHandler.hpp"
 #include "signalDispatcher.hpp"
 
-class Client  : public ClientInterface
+class Client
 {
   public:
   Client();
