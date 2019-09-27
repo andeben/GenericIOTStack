@@ -11,12 +11,8 @@ class GenericIoTStack
 	bool InitializeClient(CommunicationIf* connection);
 	bool InitializeServer(CommunicationIf* connection);
   bool RunStack();
-  GIS_ReturnCode_t RegisterApplicationObject(GIS_ObjectTypeId_t objectTypeId, int objectInstanceId);
-  GIS_ReturnCode_t ExecuteActionOnObjectInstance(GIS_ObjectTypeId_t      objectTypeId,
-																								 int 								     objectInstanceId,
-																								 GIS_ObjectAttributeId_t objectAttributeId,
-																								 GIS_Command_t 			     action,
-																								 GIS_Value_t*            value);
+  GIS_ReturnCode_t CreateApplicationObject(GIS_ObjectTypeId_t objectTypeId, int objectInstanceId);
+  
 };
 
 #endif //GENERIC_IOT_STACK_HPP

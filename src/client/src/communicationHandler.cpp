@@ -8,7 +8,7 @@ CommunicationHandler::CommunicationHandler(CommunicationIf* communication,
    : mCommunication(communication),
      mSignalDispatcher(signalDispatcher)
 {
-  communication->RegisterIncomingMessageHandler(std::bind(&CommunicationHandler::HandleIncomingMessage, this, std::placeholders::_1));
+  communication->RegisterIncomingMessageHandler(std::bind(&CommunicationHandler::HandleIncomingMessage, this, std::placeholders::_1, std::placeholders::_2));
 }
 
 CommunicationHandler::~CommunicationHandler()
@@ -16,9 +16,10 @@ CommunicationHandler::~CommunicationHandler()
 
 }
 
-void CommunicationHandler::HandleIncomingMessage(GIS_BlackChannel_t* message)
+void CommunicationHandler::HandleIncomingMessage(uint8_t* data, uint16_t dataLength)
 {
-  switch(message->signalId)
+
+  switch(((GIS_BlackChannel_t*)data)->signalId)
   {
     case GIS_REQUEST:
     {
@@ -48,5 +49,5 @@ void CommunicationHandler::SendMessage(SignalIds_t signalId, uint8_t* data, uint
   message.signalId = signalId;
   message.length   = dataLength;
   message.data     = data;
-  mCommunication->SendMessage(&message);
+  mCommunication->SendMessage((uint8_t*)(&message), sizeof(message)+dataLength);
 }

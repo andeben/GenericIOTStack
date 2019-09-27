@@ -6,8 +6,8 @@
 class CommunicationIfMock : public CommunicationIf {
 public:
   
-  MOCK_METHOD1(SendMessage, void(GIS_BlackChannel_t* message));
-  MOCK_METHOD1(RegisterIncomingMessageHandler, void(std::function<void(GIS_BlackChannel_t* message)>));
+  MOCK_METHOD2(SendMessage, void(uint8_t* data, uint16_t dataLength));
+  MOCK_METHOD1(RegisterIncomingMessageHandler, void(std::function<void(uint8_t* data, uint16_t dataLength)>));
 };
 
 #endif //COMMUNICATION_IF_MOCK_HPP

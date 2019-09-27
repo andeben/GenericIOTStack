@@ -9,7 +9,7 @@ class CommunicationHandler
   CommunicationHandler(CommunicationIf* communication, 
                        SignalDispatcher* signalDispatcher);
   ~CommunicationHandler();
-  void HandleIncomingMessage(GIS_BlackChannel_t* message);
+  void HandleIncomingMessage(uint8_t* data, uint16_t dataLength);
   void SendMessage(SignalIds_t signalId, uint8_t* data, uint32_t dataLength);
   private:
   
