@@ -35,8 +35,8 @@ enum GIS_ObjectAttributeId_t {
 
 class GIS_Value_t {
 public:
-  Value() {};
-  ~Value() {};
+  GIS_Value_t() {};
+  ~GIS_Value_t() {};
   int GetValueAsInt() {return std::stoi(valueAsBuffer);};
   void SetValueAsInt(int setValue) {memcpy(valueAsBuffer, (std::to_string(setValue).c_str()), 4);};
 private:

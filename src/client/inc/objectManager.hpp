@@ -9,9 +9,9 @@ class ObjectManager
   public:
   ObjectManager();
   ~ObjectManager();
-  bool AddObjectInstance(GIS_ObjectId_t id, ObjectIf* object);
+  bool AddObjectInstance(GIS_ObjectTypeId_t id, ObjectIf* object);
   private:
-  std::map<GIS_ObjectId_t, ObjectIf*> mObjectRegister;
+  std::map<GIS_ObjectTypeId_t, ObjectIf*> mObjectRegister;
 };
 
 #endif //OBJECT_MANAGER_HPP
