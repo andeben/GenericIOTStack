@@ -5,7 +5,7 @@
 
 class CommunicationIfMock : public CommunicationIf {
 public:
-  
+  MOCK_METHOD2(ConnectToRemote, void(std::string ip, int port));
   MOCK_METHOD2(SendMessage, void(uint8_t* data, uint16_t dataLength));
   MOCK_METHOD1(RegisterIncomingMessageHandler, void(std::function<void(uint8_t* data, uint16_t dataLength)>));
 };

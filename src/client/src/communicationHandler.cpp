@@ -2,6 +2,8 @@
 #include <string>
 #include "communicationHandler.hpp"
 #include "signalDispatcher.hpp"
+#define IP "0.0.0.0"
+#define PORT 9000U
 
 CommunicationHandler::CommunicationHandler(CommunicationIf* communication, 
                                            SignalDispatcher* signalDispatcher)
@@ -9,6 +11,7 @@ CommunicationHandler::CommunicationHandler(CommunicationIf* communication,
      mSignalDispatcher(signalDispatcher)
 {
   communication->RegisterIncomingMessageHandler(std::bind(&CommunicationHandler::HandleIncomingMessage, this, std::placeholders::_1, std::placeholders::_2));
+  communication->ConnectToRemote(IP, PORT);
 }
 
 CommunicationHandler::~CommunicationHandler()
