@@ -7,12 +7,12 @@ class CommunicationIf
 {
   public:
   virtual ~CommunicationIf() {};
-  virtual void ConnectToRemote(std::string ip, int port) = 0;
+  virtual int ConnectToRemote(std::string ip, int port) = 0;
   virtual void SendMessage(uint8_t* dataBuffer, uint16_t dataLength) = 0;
-  void RecieveMessage(uint8_t* dataBuffer, uint16_t dataLength) {if (messageHandler != nullptr) {messageHandler(dataBuffer, dataLength);} }
-  void RegisterIncomingMessageHandler(std::function<void (uint8_t* dataBuffer, uint16_t dataLength)> callback) {messageHandler = callback;};
+  void RecieveMessage(uint8_t* dataBuffer, uint16_t dataLength) {if (mMessageHandler != nullptr) {mMessageHandler(dataBuffer, dataLength);} }
+  void RegisterIncomingMessageHandler(std::function<void (uint8_t* dataBuffer, uint16_t dataLength)> callback) {mMessageHandler = callback;};
   private: 
-  std::function<void (uint8_t* dataBuffer, uint16_t dataLength)> messageHandler = nullptr;  
+  std::function<void (uint8_t* dataBuffer, uint16_t dataLength)> mMessageHandler = nullptr;  
 };
 
 #endif //COMMUNICATION_IF_HPP
